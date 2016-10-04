@@ -34,7 +34,7 @@ module.exports = {
     it: 'non può risolvere il riferimento {{=e.params.ref}}',
     pl: 'nie można znaleść schematu {{=e.params.ref}}',
     ru: 'не найдена схема {{=e.params.ref}}',
-    ja: '{{=e.params.ref}}のスキーマを見つけることができない',
+    ja: '{{=e.params.ref}}のスキーマがみつかりません',
     es: 'no se puede resolver la referencia {{=e.params.ref}}'
   },
   additionalItems: {
@@ -44,7 +44,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere più di {{=n}} element{{#def.mPlural}}',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}',
-    ja: '{{#def.n}}は{{=n}}以上あってはいけない',
+    ja: '{{#def.n}}は{{=n}}以下で設定してください',
     es: '{{#def.n}}no debe tener más de {{=n}} elemento{{#def.mPlural}}'
     // en: 'Additional items not allowed',
     // fr: 'Éléments additionnels non autorisés',
@@ -60,7 +60,7 @@ module.exports = {
     it: 'non dovrebbe avere attributi aggiuntive',
     pl: 'nie powinien zawierać dodatkowych pól',
     ru: 'не должно иметь дополнительные поля',
-    ja: '追加してはいけない',
+    ja: '追加の要素は設定できません',
     es: 'no debe tener propiedades adicionales'
     // en: 'Additional properties not allowed',
     // fr: 'Propriétés additionnelles non autorisées',
@@ -76,7 +76,7 @@ module.exports = {
     it: 'deve corrispondere qualche schema in "anyOf"',
     pl: 'powinien pasować do wzoru z sekcji "anyOf"',
     ru: 'должно соответствовать одной их схем в "anyOf"',
-    ja: '"anyOf"のスキーマとマッチしなくてはいけない',
+    ja: '入力許可されているスキーマと一致してません。',
     es: 'debe coincidir con algún esquema en "anyOf"'
     // en: 'Data does not match any schemas from "anyOf"',
     // fr: 'La donnée ne correspond à aucun schema de "anyOf"',
@@ -95,7 +95,7 @@ module.exports = {
     it: '{{#def.n}}dovrebbe avere attribut{{#def.propPlural}} {{=e.params.deps}} quando attributo {{=e.params.property}} è presente',
     pl: '{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne',
     ru: '{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}',
-    ja: '{{=e.params.property}}がある場合、{{#def.n}}は{{=e.params.deps}}をつけなければいけない',
+    ja: '{{=e.params.property}}がある場合、{{#def.n}}は{{=e.params.deps}}が必須です。',
     es: '{{#def.n}}debe contener la{{#def.mPlural}} propiedad{{#def.propPlural}} {{=e.params.deps}} cuando la propiedad {{=e.params.property}} se encuentra presente'
     // en: 'Dependency failed - key must exist: {missing} (due to key: {key})',
     // fr: 'Echec de dépendance - la clé doit exister: {missing} (du à la clé: {key})',
@@ -111,7 +111,7 @@ module.exports = {
     it: 'dovrebbe essere pari ad uno dei valori predefiniti',
     pl: 'powinien być równy jednej z predefiniowanych wartości',
     ru: 'должно быть равен одному из значений в "enum"',
-    ja: '事前に定義された値のいずれかに等しくなければいけない',
+    ja: '入力値は候補の中から選択してください',
     es: 'deber ser igual a uno de los valores predefinidos'
     // en: 'No enum match for: {value}',
     // fr: 'Aucune valeur correspondante (enum) pour: {value}',
@@ -127,7 +127,7 @@ module.exports = {
     it: 'deve corrispondere formato "{{=e.params.format}}"',
     pl: 'powinien zgadzać się z formatem "{{=e.params.format}}"',
     ru: 'должно соответствовать формату "{{=e.params.format}}"',
-    ja: '"{{=e.params.format}}"形式に揃えなければいけない',
+    ja: '"{{=e.params.format}}"形式で記述してください',
     es: 'debe coincidir con el formato "{{=e.params.format}}"'
     // en: 'Format validation failed ({message})',
     // fr: 'Échec de validation du format ({message})',
@@ -146,7 +146,7 @@ module.exports = {
     it: '{{#def.c}}dovrebbe essere {{=cond}}',
     pl: '{{#def.c}}powinien być {{=cond}}',
     ru: '{{#def.c}}должно быть {{=cond}}',
-    ja: '{{#def.c}}{{=cond}}でなければいけない',
+    ja: '条件を満たしてください（{{#def.c}}{{=cond}}）',
     es: '{{#def.c}}debe ser {{=cond}}'
     // en: 'Value {value} is greater than maximum {maximum}',
     // fr: 'La valeur {value} est supérieure au maximum {maximum}',
@@ -165,7 +165,7 @@ module.exports = {
     it: '{{#def.c}}dovrebbe essere {{=cond}}',
     pl: '{{#def.c}}powinien być {{=cond}}',
     ru: '{{#def.c}}должно быть {{=cond}}',
-    ja: '{{#def.c}}{{=cond}}でなければいけない',
+    ja: '次の条件を満たしてください（{{#def.c}}{{=cond}}）',
     es: '{{#def.c}}debe ser {{=cond}}'
     // en: 'Value {value} is less than minimum {minimum}',
     // fr: 'La valeur {value} est inférieure au minimum {minimum}',
@@ -187,7 +187,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere più di {{=n}} element{{#def.mPlural}}',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}',
-    ja: '{{#def.n}}は{{=n}}個以上であってはいけない',
+    ja: '{{#def.n}}は{{=n}}以下で設定してください',
     es: '{{#def.n}}no debe contener más de {{=n}} elemento{{#def.mPlural}}'
     // en: 'Array is too long ({length}), maximum {maximum}',
     // fr: 'Le tableau est trop long ({length}), maximum {maximum}',
@@ -203,7 +203,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere meno di {{=n}} element{{#def.mPlural}}',
     pl: '{{#def.n}}nie powinien mieć mniej niż {{=n}} element{{#def.mPlural}}',
     ru: '{{#def.n}}должно иметь не менее, чем {{=n}} элемент{{#def.mPlural}}',
-    ja: '{{#def.n}}は{{=n}}個以下であってはいけない',
+    ja: '{{#def.n}}は{{=n}}以上で設定してください',
     es: '{{#def.n}}no debe contener menos de {{=n}} elemento{{#def.mPlural}}'
     // en: 'Array is too short ({length}), minimum {minimum}',
     // fr: 'Le tableau est trop court ({length}), minimum {minimum}',
@@ -219,7 +219,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe essere più lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     pl: '{{#def.n}}nie powinien być dłuższy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
     ru: '{{#def.n}}должно быть не длиннее, чем {{=n}} символ{{#def.mPlural}}',
-    ja: '{{#def.n}}は{{=n}}文字以上であってはいけない',
+    ja: '{{#def.n}}は最大{{=n}}文字以内で設定してください',
     es: '{{#def.n}}no debe contener más de {{=n}} caracter{{? n!=1 }}es{{?}}'
     // en: 'String is too long ({length} chars), maximum {maximum}',
     // fr: 'Le texte est trop long ({length} carac.), maximum {maximum}',
@@ -235,7 +235,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe essere meno lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     pl: '{{#def.n}}nie powinien być krótszy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
     ru: '{{#def.n}}должно быть не короче, чем {{=n}} символ{{#def.mPlural}}',
-    ja: '{{#def.n}}は{{=n}}文字以下であってはいけない',
+    ja: '{{#def.n}}は最低{{=n}}文字で設定してください',
     es: '{{#def.n}}no debe contener menos de {{=n}} caracter{{? n!=1 }}es{{?}}'
     // en: 'String is too short ({length} chars), minimum {minimum}',
     // fr: 'Le texte est trop court ({length} carac.), minimum {minimum}',
@@ -251,7 +251,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere più {{=n}} attribut{{#def.propPlural}}',
     pl: '{{#def.n}}nie powinien zawierać więcej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} пол{{#def.propPlural}}',
-    ja: '{{#def.n}}は{{=n}}個以上のプロパティを有してはいけない',
+    ja: '{{#def.n}}は{{=n}}個以上の要素を持つことはできません',
     es: '{{#def.n}}no debe contener más de {{=n}} propiedad{{#def.propPlural}}'
     // en: 'Too many properties defined ({propertyCount}), maximum {maximum}',
     // fr: 'Trop de propriétés définies ({propertyCount}), maximum {maximum}',
@@ -267,7 +267,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere meno {{=n}} attribut{{#def.propPlural}}',
     pl: '{{#def.n}}nie powinien zawierać mniej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
     ru: '{{#def.n}}должно иметь не менее, чем {{=n}} пол{{#def.propPlural}}',
-    ja: '{{#def.n}}は{{=n}}個以下のプロパティを有してはいけない',
+    ja: '{{#def.n}}は最低{{=n}}個以上の要素を設定してください',
     es: '{{#def.n}}no debe contener menos de {{=n}} propiedad{{#def.propPlural}}'
     // en: 'Too few properties defined ({propertyCount}), minimum {minimum}',
     // fr: 'Pas assez de propriétés définies ({propertyCount}), minimum {minimum}',
@@ -283,7 +283,7 @@ module.exports = {
     it: 'dovrebbe essere un multiplo di {{=e.params.multipleOf}}',
     pl: 'powinien być wielokrotnością {{=e.params.multipleOf}}',
     ru: 'должно быть кратным {{=e.params.multipleOf}}',
-    ja: '{{=e.params.multipleOf}}の倍数でなければいけない',
+    ja: '{{=e.params.multipleOf}}の倍数を設定してください',
     es: 'debe ser múltiplo de {{=e.params.multipleOf}}'
     // en: 'Value {value} is not a multiple of {multipleOf}',
     // fr: 'La valeur {value} n\'est pas un multiple de {multipleOf}',
@@ -299,7 +299,7 @@ module.exports = {
     it: 'non dovrebbe essere valida in base allo schema di "non"',
     pl: 'nie powinien pasować do wzoru z sekcji "not"',
     ru: 'должно не соответствовать схеме в "not"',
-    ja: '"not"のスキーマに従って有効としてはいけない',
+    ja: '"NOT"のスキーマ条件を満たしていません',
     es: 'no debe ser válido según el esquema en "not"'
     // en: 'Data matches schema from "not"',
     // fr: 'La donnée correspond au schema de "not"',
@@ -315,7 +315,7 @@ module.exports = {
     it: 'dovrebbe corrispondere esattamente uno schema in "oneOf"',
     pl: 'powinien pasować do jednego wzoru z sekcji "oneOf"',
     ru: 'должно соответствовать в точности одной схемe в "oneOf"',
-    ja: '"oneOf"のスキーマと完全に一致しなくてはいけない',
+    ja: '"oneOf"のスキーマ条件を満たしていません',
     es: 'debe coincidir con un solo esquema en "oneOf"'
     // en: 'Data does not match any schemas from "oneOf"',
     // fr: 'La donnée ne correspond à aucun schema de  "oneOf"',
@@ -331,7 +331,7 @@ module.exports = {
     it: 'deve corrispondere al modello "{{=e.params.pattern}}"',
     pl: 'powinien zgadzać się ze wzorem "{{=e.params.pattern}}"',
     ru: 'должно соответствовать образцу "{{=e.params.pattern}}"',
-    ja: '"{{=e.params.pattern}}"のパターンと一致しなければいけない',
+    ja: '"{{=e.params.pattern}}"のパターンと一致していません',
     es: 'debe coincidir con el patron "{{=e.params.pattern}}"'
     // en: 'String does not match pattern: {pattern}',
     // fr: 'Le texte ne correspond pas au motif: {pattern}',
@@ -347,7 +347,7 @@ module.exports = {
     it: 'dovrebbe avere attributo richiesta {{=e.params.missingProperty}}',
     pl: 'powinien zawierać wymagane pole {{=e.params.missingProperty}}',
     ru: 'должно иметь обязательное поле {{=e.params.missingProperty}}',
-    ja: '必要なプロパティ{{=e.params.missingProperty}}がなければいけない',
+    ja: '必要な要素（{{=e.params.missingProperty}}）がありません',
     es: 'debe tener la propiedad requerida {{=e.params.missingProperty}}'
     // es: 'la propiedad {{=e.params.missingProperty}} es requerida'
     // en: 'Missing required property: {key}',
@@ -364,7 +364,7 @@ module.exports = {
     it: 'dovrebbe essere {{=e.params.type}}',
     pl: 'powinien być {{=e.params.type}}',
     ru: 'должно быть {{=e.params.type}}',
-    ja: '{{=e.params.type}}でなければいけない',
+    ja: '{{=e.params.type}}で入力してください',
     es: 'debe ser {{=e.params.type}}'
     // en: 'Invalid type: {type} (expected {expected})',
     // fr: 'Type invalide: {type} ({expected} attendu)',
@@ -380,7 +380,7 @@ module.exports = {
     it: 'non dovrebbe avere elementi duplicati (elementi ## {{=e.params.j}} e {{=e.params.i}} sono uguali)',
     pl: 'nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)',
     ru: 'не должно иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)',
-    ja: '重複するアイテムがあってはいけない（{{=e.params.j}}と{{=e.params.i}}は同じである）',
+    ja: 'アイテムが重複しています（{{=e.params.j}}＝{{=e.params.i}}）',
     es: 'no debe contener elementos duplicados, (los elementos ## {{=e.params.j}} y {{=e.params.i}} son idénticos)'
     // en: 'Array items are not unique (indices {match1} and {match2})',
     // fr: 'Des éléments du tableau ne sont pas uniques (indices {match1} et {match2})',
